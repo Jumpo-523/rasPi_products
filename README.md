@@ -4,3 +4,7 @@ https://github.com/pallets/flask/blob/1.1.2/examples/tutorial/flaskr/　flaskの
 
 将来的に画像解析を実施し、自分の姿勢が猫背になっていないか監視するアプリケーションを作成する予定。
 
+
+```bash
+curl -X POST -H "Content-Type: multipart/form-data" -F "file=@/home/pi/Desktop/image.jpg" <ip-address>:5000/send_image
+```
