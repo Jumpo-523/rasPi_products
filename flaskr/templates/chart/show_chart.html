@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block header %}
+  <h1>{% block title %}The Graph{% endblock %}</h1>
+  <!-- {% if g.user %}
+    <a class="action" href="{{ url_for('blog.create') }}">New</a>
+  {% endif %} -->
+{% endblock %}
+
+
+{% block content %}
+<img src="/plot.png" alt="my plot">
+{% endblock %}
