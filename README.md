@@ -12,3 +12,8 @@ raspberry pi側はtake_shot.py及び以下のコマンドをcron実行して画�
 ```bash
 curl -X POST -H "Content-Type: multipart/form-data" -F "file=@/home/pi/Desktop/image.jpg" <ip-address>:5000/send_image
 ```
+
+
+ネタリスト
+
+- ひたすらn度寝してしまうので、布団に横たわっている場合叱咤してくれる目覚ましを作りたい。
