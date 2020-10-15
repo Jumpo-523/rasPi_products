@@ -1,13 +1,16 @@
 {% extends 'base.html' %}
 
+
 {% block header %}
   <h1>{% block title %}Posts{% endblock %}</h1>
   {% if g.user %}
     <a class="action" href="{{ url_for('blog.create') }}">New</a>
   {% endif %}
+  
 {% endblock %}
 
 {% block content %}
+
   {% for post in posts %}
     <article class="post">
       <header>
@@ -25,4 +28,38 @@
       <hr>
     {% endif %}
   {% endfor %}
+
+  
+{% endblock %}
+
+{% block graphs %}
+
+<div id="graphDiv" class="graph">graphDiv</div>
+<script>
+  /* JAVASCRIPT CODE GOES HERE */
+
+  var graphDiv = document.getElementById('graphDiv')
+
+var data = [{
+  x: [1999, 2000, 2001, 2002],
+  y: [10, 15, 13, 17],
+  type: 'scatter'
+}];
+
+var layout = {
+  height: 500,
+  title: 'Sales Growth',
+  xaxis: {
+    title: 'Year',
+    showgrid: false,
+    zeroline: false
+  },
+  yaxis: {
+    title: 'Percent',
+    showline: false
+  }
+};
+Plotly.newPlot(graphDiv, data, layout);
+</script>
+
 {% endblock %}

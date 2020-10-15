@@ -31,7 +31,13 @@ def send_image():
     # flipped_img.save("image.jpg")
     img.save("image.jpg")
     return "image received!"
-    
+
+
+
+# https://pythonhosted.org/RPIO/rpio_py.html#gpio-input-output
+# GPIOのmoduleの中身を理解するためのdocumentation
+# 、grove Piを経由せずにsensordataを音センサー（SEN02281P）から取得してボットを作成している。
+# http://dotnsf.blog.jp/archives/1052664142.html 
 
 
 
