@@ -13,7 +13,8 @@ import json
 
 # from flaskr.auth import login_required
 # from flaskr.db import get_db
-import os, yaml
+import os
+# import yaml
 
 from flask import Flask, request, abort
 from linebot import (
