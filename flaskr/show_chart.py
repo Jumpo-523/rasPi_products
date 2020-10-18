@@ -17,8 +17,8 @@ import requests
 import io
 import random
 from flask import Response
-from matplotlib.backends.backend_agg import FigureCanvasAgg
-from matplotlib.figure import Figure
+# from matplotlib.backends.backend_agg import FigureCanvasAgg
+# from matplotlib.figure import Figure
 
 
 bp = Blueprint("show_chart", __name__)
