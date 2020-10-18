@@ -110,6 +110,3 @@ def motion_detect():
     return "Okay I understand that he is sleeping!" if still_sleeping else ""
 
 
-if __name__ == "__main__":
-    port = int(os.getenv("PORT", 5000))
-    bp.run(host="0.0.0.0", port=port)
