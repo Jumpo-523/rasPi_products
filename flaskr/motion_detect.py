@@ -27,8 +27,8 @@ from linebot.models import (
     MessageEvent, TextMessage, TemplateSendMessage, CarouselTemplate, CarouselColumn)
 
 from io import BytesIO
-from PIL import Image, ImageOps
-import requests
+# from PIL import Image, ImageOps
+# import requests
 
 # API
 bp = Blueprint("motion_detection", __name__)
