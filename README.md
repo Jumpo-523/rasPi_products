@@ -26,3 +26,8 @@ curl -X POST -H "Content-Type: multipart/form-data" -F "file=@/home/pi/Desktop/i
 
     - heroku の使い方を学ぶ
         - `git push heroku master`でheroku serverにPUSHするとデプロイしてくれる。 https://qiita.com/sayama0402/items/e2c9e65786259dc55e11
+
+        【ひたすら503エラーを履いてくる。】
+        →デプロイの段階でサーバエラー履いていることが予想される。
+        - herokuに渡したconfig情報を渡せていない。
+        - line-bot-sdkモジュールをrequirement.txtに入れないとダメかもしれない。
