@@ -123,3 +123,10 @@ def delete(id):
     db.execute("DELETE FROM post WHERE id = ?", (id,))
     db.commit()
     return redirect(url_for("blog.index"))
+
+
+@bp.route("/get_sample_data", methods=("GET",))
+def get_sample_data():
+    # import pdb; pdb.set_trace()
+    out = {"y": [0, 14, 3, 17]}
+    return out

@@ -7,8 +7,8 @@ from flask import request
 from flask import url_for
 from werkzeug.exceptions import abort
 
-from flaskr.auth import login_required
-from flaskr.db import get_db
+# from flaskr.auth import login_required
+# from flaskr.db import get_db
 
 from io import BytesIO
 from PIL import Image, ImageOps
@@ -41,3 +41,6 @@ def send_image():
 
 
 
+if __name__ == "__main__":
+    import sys
+    print(sys.argv[1])

@@ -36,12 +36,13 @@ def create_app(test_config=None):
     db.init_app(app)
 
     # apply the blueprints to the app
-    from flaskr import auth, blog, show_chart, send_image
+    from flaskr import auth, blog, show_chart, send_image, motion_detect
 
     app.register_blueprint(auth.bp)
     app.register_blueprint(blog.bp)
     app.register_blueprint(show_chart.bp)
     app.register_blueprint(send_image.bp)
+    app.register_blueprint(motion_detect.bp)
 
     # make url_for('index') == url_for('blog.index')
     # in another app, you might define a separate main index here with

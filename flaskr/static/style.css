@@ -137,3 +137,9 @@ input[type=submit] {
   align-self: start;
   min-width: 10em;
 }
+
+
+button#get_data_button {
+  width: 20px;
+  height: 30px; 
+}
