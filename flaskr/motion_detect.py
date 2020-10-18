@@ -112,4 +112,4 @@ def motion_detect():
 
 if __name__ == "__main__":
     port = int(os.getenv("PORT", 5000))
-    app.run(host="0.0.0.0", port=port)
+    bp.run(host="0.0.0.0", port=port)
