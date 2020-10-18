@@ -31,3 +31,6 @@ curl -X POST -H "Content-Type: multipart/form-data" -F "file=@/home/pi/Desktop/i
         →デプロイの段階でサーバエラー履いていることが予想される。
         - herokuに渡したconfig情報を渡せていない。
         - line-bot-sdkモジュールをrequirement.txtに入れないとダメかもしれない。
+
+        - ホスト環境汚れていることに起因するかもなので環境整えて、docker上でもう一回やり直したほうがいいかもしれない。
+        
