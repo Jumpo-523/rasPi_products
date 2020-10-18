@@ -17,3 +17,12 @@ curl -X POST -H "Content-Type: multipart/form-data" -F "file=@/home/pi/Desktop/i
 ネタリスト
 
 - ひたすらn度寝してしまうので、布団に横たわっている場合叱咤してくれる目覚ましを作りたい。
+
+
+### LINEで
+
+ひたすらn度寝してしまうので、布団に横たわっている場合叱咤してくれる目覚ましを作りたい。
+    - コミットメントとして、家族・友人に二度寝状況を伝えるだけのBOTを作ってみる。
+
+    - heroku の使い方を学ぶ
+        - `git push heroku master`でheroku serverにPUSHするとデプロイしてくれる。 https://qiita.com/sayama0402/items/e2c9e65786259dc55e11

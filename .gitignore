@@ -12,3 +12,6 @@ build/
 .idea/
 *.swp
 *~
+.DS_Store
+./flaskr/.DS_Store
+./flaskr/get_access_token.sh
