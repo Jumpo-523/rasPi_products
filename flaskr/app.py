@@ -1,6 +1,6 @@
 import argparse
 # __init__ファイル内の関数は,相対参照している。より良い方法があるか？...
-from . import create_app
+# from . import create_app
 # from flask_socketio import SocketIO, emit, join_room, leave_room, \
 #       close_room, rooms, disconnect
 
