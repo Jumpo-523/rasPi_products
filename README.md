@@ -34,4 +34,9 @@ curl -X POST -H "Content-Type: multipart/form-data" -F "file=@/home/pi/Desktop/i
 
         - ホスト環境汚れていることに起因するかもなので環境整えて、docker上でもう一回やり直したほうがいいかもしれない。
         https://nokt2018.hatenablog.com/entry/2018/09/29/030557
+
+        - ERRORの出どころ理解した。
+            まず、Procfileの書き忘れだった。
+            次に依存モジュールのnot found
+
         

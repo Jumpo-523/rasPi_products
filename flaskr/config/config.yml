@@ -5,3 +5,6 @@ expires_in: 2592000
 token_type: 'Bearer'
 
 LINE_CHANNEL_SECRET: '8352edca599153f2362bc9b7d3bb2610'
+
+
+My_Raspberry_PI_IP_ADDRESS: '100.64.1.29'

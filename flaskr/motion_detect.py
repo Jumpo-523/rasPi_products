@@ -110,3 +110,5 @@ def motion_detect():
     return "Okay I understand that he is sleeping!" if still_sleeping else ""
 
 
+if __name__ == "__main__":
+    bp.run(debug=True)

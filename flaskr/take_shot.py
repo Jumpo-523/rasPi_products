@@ -23,13 +23,22 @@ GPIO.setup(13, GPIO.IN)
 
 
 cnt = 0
-while True:
-    time.sleep(1)
+path = f"/home/pi/Desktop/image_{cnt}.jpg"
+
+
+
+def take_photo(path):
     if GPIO.input(SIG) == 0:
         camera = PiCamera()
         camera.start_preview()
         time.sleep(5*60)
-        camera.capture(f"/home/pi/Desktop/image_{cnt}.jpg")
+        camera.capture(path)
         camera.stop_preview()
+    else:
+        print("somthing wrong in PIN 13")
 
 
+
+if __name__ == "__main__":
+    # test_take
+    take_photo(path)

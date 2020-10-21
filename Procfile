@@ -1,1 +1,1 @@
-web: flask run
+web: python ./flaskr/motion_detect.py
