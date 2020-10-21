@@ -56,6 +56,7 @@ handler = WebhookHandler(LINE_CHANNEL_SECRET)
 
 @bp.route("/callback", methods=['POST'])
 def callback():
+
     signature = request.headers['X-Line-Signature']
 
     body = request.get_data(as_text=True)
@@ -110,5 +111,3 @@ def motion_detect():
     return "Okay I understand that he is sleeping!" if still_sleeping else ""
 
 
-if __name__ == "__main__":
-    bp.run(debug=True)

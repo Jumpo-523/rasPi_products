@@ -36,7 +36,7 @@ def create_app(test_config=None):
     db.init_app(app)
 
     # apply the blueprints to the app
-    # from flaskr import auth, blog, show_chart, send_image, motion_detect
+    from flaskr import auth, blog, motion_detect # show_chart, send_image, 
 
     app.register_blueprint(auth.bp)
     app.register_blueprint(blog.bp)
