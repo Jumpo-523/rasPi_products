@@ -31,6 +31,7 @@ thread = None
 if __name__ == '__main__':
     # socketio.run(app, debug=True)
     # herokuが引数を
+    print(" what is default parameters")
     arg_parser = ArgumentParser(
         usage='Usage: python ' + __file__ + ' [--port <port>] [--help]'
     )
