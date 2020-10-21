@@ -39,4 +39,8 @@ curl -X POST -H "Content-Type: multipart/form-data" -F "file=@/home/pi/Desktop/i
             まず、Procfileの書き忘れだった。
             次に依存モジュールのnot found
 
+            - PORTの指定[`${PORT}`heroku側で指定しているポート番号を利用する。]
+            相対参照は、モジュール化してしまうと🆖になる。
+            application server uWSGI経由で無いと、localhost限定でサーバが立ち上がってしまう（DEV環境？）
+
         
