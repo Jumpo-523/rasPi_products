@@ -1,1 +1,1 @@
-web: uwsgi --http 0.0.0.0:9090 --wsgi-file ./flaskr/app.py --callable app --stats 0.0.0.0:9191
+web: uwsgi --http 0.0.0.0:${PORT} --wsgi-file ./flaskr/app.py --callable app 
