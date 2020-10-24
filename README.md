@@ -46,4 +46,9 @@ curl -X POST -H "Content-Type: multipart/form-data" -F "file=@/home/pi/Desktop/i
         10/22
         残ったエラーは全て、Flask内部の処理を理解すれば解決するものなので、一旦ここで作業中断。
 
+        https://qiita.com/rebi/items/efd1c36f0a9e46222d80
+        に基づいて、LINE上にMSGを送信することが出来ました！
+
+        LINE APIの仕様の問題なのか、「ごめんなさい」文がいまだ表示されてしまう問題が依然発生しています。。
+
         
