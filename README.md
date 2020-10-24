@@ -42,5 +42,8 @@ curl -X POST -H "Content-Type: multipart/form-data" -F "file=@/home/pi/Desktop/i
             - PORTの指定[`${PORT}`heroku側で指定しているポート番号を利用する。]
             相対参照は、モジュール化してしまうと🆖になる。
             application server uWSGI経由で無いと、localhost限定でサーバが立ち上がってしまう（DEV環境？）
+        
+        10/22
+        残ったエラーは全て、Flask内部の処理を理解すれば解決するものなので、一旦ここで作業中断。
 
         
