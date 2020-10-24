@@ -51,4 +51,7 @@ curl -X POST -H "Content-Type: multipart/form-data" -F "file=@/home/pi/Desktop/i
 
         LINE APIの仕様の問題なのか、「ごめんなさい」文がいまだ表示されてしまう問題が依然発生しています。。
 
+
++ ノリで考えたアイデアだけど、「遠隔」で管理したいものがある場合、LINEをUIにしているだけで、いろいろ応用可能なシステムとなる気がしている。
+
         
