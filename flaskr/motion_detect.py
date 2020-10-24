@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-from flask import Blueprint
+from flask import Blueprint, current_app
 from flask import flash
 from flask import g
 from flask import redirect
@@ -59,8 +59,9 @@ def callback():
 
     signature = request.headers['X-Line-Signature']
 
+    logger = current_app.logger
     body = request.get_data(as_text=True)
-    # bp.logger.info("Request body: " + body)
+    logger.info("Request body: " + body)
 
     try:
         handler.handle(body, signature)
