@@ -76,8 +76,8 @@ def response_message(event):
     # import pdb; pdb.set_trace()
     # notesのCarouselColumnの各値は、変更してもらって結構です。
     notes = [CarouselColumn(thumbnail_image_url="https://renttle.jp/static/img/renttle02.jpg",
-                            title="【ReleaseNote】トークルームを実装しました。",
-                            text="creation(創作中・考え中の何かしらのモノ・コト)に関して、意見を聞けるようにトークルーム機能を追加しました。",
+                            title="田久保を起こす",
+                            text="田久保に御用の方は",
                             actions=[{"type": "message","label": "サイトURL","text": "https://renttle.jp/notes/kota/7"}]),
 
              CarouselColumn(thumbnail_image_url="https://renttle.jp/static/img/renttle03.jpg",
