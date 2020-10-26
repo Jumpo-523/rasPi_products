@@ -13,7 +13,7 @@ build/
 *.swp
 *~
 .DS_Store
-./flaskr/.DS_Store
-./flaskr/get_access_token.sh
+flaskr/.DS_Store
+flaskr/get_access_token.sh
 
-./flaskr/config/config.yml
+flaskr/config/config.yml 
