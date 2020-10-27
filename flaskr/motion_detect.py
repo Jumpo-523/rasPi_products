@@ -42,10 +42,7 @@ bp = Blueprint("motion_detection", __name__)
 # まずは、LINE botを作成してみる。https://qiita.com/kotamatsuoka/items/c4e651f1cb6c4490f4b8
 
 is_sleep = False
-# f = open("./config/config.yml", "r+")
-# config = yaml.safe_load(f)
-# LINE_CHANNEL_ACCESS_TOKEN = config["LINE_CHANNEL_ACCESS_TOKEN"]
-# LINE_CHANNEL_SECRET = config["LINE_CHANNEL_SECRET"]
+
 
 LINE_CHANNEL_ACCESS_TOKEN = os.environ["LINE_CHANNEL_ACCESS_TOKEN"]
 LINE_CHANNEL_SECRET = os.environ["LINE_CHANNEL_SECRET"]
@@ -74,6 +71,7 @@ def callback():
 @handler.add(MessageEvent, message=TextMessage)
 def response_message(event):
     # import pdb; pdb.set_trace()
+    print(event)
     # notesのCarouselColumnの各値は、変更してもらって結構です。
     notes = [CarouselColumn(thumbnail_image_url="https://renttle.jp/static/img/renttle02.jpg",
                             title="田久保を起こす",
