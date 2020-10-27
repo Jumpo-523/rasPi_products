@@ -13,6 +13,11 @@ https://github.com/pallets/flask/blob/1.1.2/examples/tutorial/flaskr/　flaskの
     - コミットメントとして、家族・友人に二度寝状況を伝えるだけのLINE BOTを作ってみる。
 + ノリで考えたアイデアだけど、「遠隔」で管理したいものがある場合、LINEをUIにしているだけで、いろいろ応用可能なシステムとなる気がしている。
 
+# 使い方
+
+【開発環境】
++ LINE message APIを利用するので、config/config.ymlにconfig情報を記載する。
++ `flaskr/run.sh`を実行し、flaskを起動する。
 
 
 
