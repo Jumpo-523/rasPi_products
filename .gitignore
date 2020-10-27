@@ -1,5 +1,6 @@
 venv/
 *.pyc
+.terraform
 __pycache__/
 instance/
 .cache/
