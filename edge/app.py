@@ -1,8 +1,10 @@
+# -*- coding: utf-8 -*-
 from flask import Flask, render_template, request
 import subprocess #シェルスクリプト起動やコマンド実行用
 import numpy as np
-import cv2, time, json, base64, requests
- 
+import time, json, base64, requests
+from motion_detect import motion_detect
+
 app = Flask(__name__)
  
 @app.route('/')
@@ -11,7 +13,7 @@ def index():
     return message
  
  
-#ajaxで使用
+#ajax/webhookで使用
 
 @app.route('/control', methods=['POST'])
 def control():
@@ -36,23 +38,31 @@ def control():
 
     return res
 
+@app.route('/motion_detect', methods=['GET'])
+def still_in_bed_room():
+    detected = motion_detect()
+    return "1" if detected else "0"
 
-def take_image():
-    # take an image
-    img = None
-    return img
 
-def send_image(img, destination_url):
-  # 画像を送信可能な形式に変換してJSONに格納
-  _, encimg = cv2.imencode(".png", img)
-  img_str = encimg.tostring()
-  img_byte = base64.b64encode(img_str).decode("utf-8")
-  img_json = json.dumps({'image': img_byte}).encode('utf-8')
+# def take_image():
+#     # take an image
+#     img = None
+#     return img
 
-  # HTTPリクエストを送信
-  response = requests.post(destination_url, data=img_json)
-  print('{0} {1}'.format(response.status_code, json.loads(response.text)["message"]))
- 
+# def send_image(img, destination_url):
+#   # 画像を送信可能な形式に変換してJSONに格納
+#   _, encimg = cv2.imencode(".png", img)
+#   img_str = encimg.tostring()
+#   img_byte = base64.b64encode(img_str).decode("utf-8")
+#   img_json = json.dumps({'image': img_byte}).encode('utf-8')
+
+#   # HTTPリクエストを送信
+#   response = requests.post(destination_url, data=img_json)
+#   print('{0} {1}'.format(response.status_code, json.loads(response.text)["message"]))
+
+
+
+
 if __name__ == '__main__':
     app.debug = True
-    app.run(host='192.168.0.31', port=8080)
+    app.run(host='0.0.0.0', port=9999)

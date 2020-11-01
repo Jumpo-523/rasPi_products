@@ -28,7 +28,7 @@ from linebot.models import (
 
 from io import BytesIO
 # from PIL import Image, ImageOps
-# import requests
+import requests
 
 # API
 bp = Blueprint("motion_detection", __name__)
@@ -98,16 +98,26 @@ def response_message(event):
 
     line_bot_api.reply_message(event.reply_token, messages=messages)
 
-@bp.route("/motion_detect", methods=["POST"]) 
-def motion_detect():
+@bp.route("/ask_motion", methods=["GET"]) 
+def ask_motion():
+    """
+    raspberry pi側に立てたflask serverに対し、人感センサーを動かし、人間がいるかいなかを検知させる。
+    30秒間確認し、検知できた場合、「1」を返す。
+    """
     # import pdb; pdb.set_trace()
     # curl -X POST -H "Content-Type: application/json" -d '{"is_sleeping":0}' localhost:5000/motion_detect
+    res = requests.get(f'http://{os.environ["My_Raspberry_PI_IP_ADDRESS"]}:9999/motion_detect')
+    
+    return res.text
 
+@bp.route("/receive_motion", methods=["POST"]) 
+def receive_motion():
+    # import pdb; pdb.set_trace()
+    # curl -X POST -H "Content-Type: application/json" -d '{"is_sleeping":0}' localhost:5000/motion_detect
     data_dict = json.loads(request.data.decode("utf-8"))
     # https://teratail.com/questions/222843
     still_sleeping = data_dict["is_sleeping"]
     if still_sleeping==1:
         is_sleep = True
     return "Okay I understand that he is sleeping!" if still_sleeping else ""
-
 
