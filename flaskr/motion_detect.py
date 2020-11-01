@@ -74,7 +74,7 @@ def response_message(event):
     print(event)
     # notesのCarouselColumnの各値は、変更してもらって結構です。
     notes = [CarouselColumn(thumbnail_image_url="https://cdn-ak.f.st-hatena.com/images/fotolife/m/mon3221/20171209/20171209094534.png",
-                            title="起こす",
+                            title="寝坊確認",
                             text="田久保が寝ているかどうかを人感センサーで感知します。",
                             # actions=[{"type": "message","label": "サイトURL","text": "https://renttle.jp/notes/kota/7"}]
                             ),
