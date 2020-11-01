@@ -73,10 +73,11 @@ def response_message(event):
     # import pdb; pdb.set_trace()
     print(event)
     # notesのCarouselColumnの各値は、変更してもらって結構です。
-    notes = [CarouselColumn(thumbnail_image_url="https://renttle.jp/static/img/renttle02.jpg",
-                            title="田久保を起こす",
-                            text="田久保に御用の方は",
-                            actions=[{"type": "message","label": "サイトURL","text": "https://renttle.jp/notes/kota/7"}]),
+    notes = [CarouselColumn(thumbnail_image_url="https://cdn-ak.f.st-hatena.com/images/fotolife/m/mon3221/20171209/20171209094534.png",
+                            title="起こす",
+                            text="田久保が寝ているかどうかを人感センサーで感知します。",
+                            # actions=[{"type": "message","label": "サイトURL","text": "https://renttle.jp/notes/kota/7"}]
+                            ),
 
              CarouselColumn(thumbnail_image_url="https://renttle.jp/static/img/renttle03.jpg",
                             title="ReleaseNote】創作中の活動を報告する機能を追加しました。",
