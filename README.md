@@ -2,6 +2,11 @@
 
 https://github.com/pallets/flask/blob/1.1.2/examples/tutorial/flaskr/　flaskのチュートリアルを元に、rasberry Piで定期的に撮影する画像を 別PCで立ち上げている flask applicationに送信するアプリ。
 
+## How to Use
+
+- localでflask appを起動し、raspberry pi上(./edge dir内のソースをraspberry piにデプロイし、flaskをraspberry pi上でも起動する)
+- local上のflaskで`motion_detect.py`内で定義した`ask_motion` メソッドを利用して通信＋人感センサーで取得したデータが取得できることを確認した・
+- `curl http://127.0.0.1/ask_motion`で実行可能
 
 ## product #1
 
@@ -12,6 +17,9 @@ https://github.com/pallets/flask/blob/1.1.2/examples/tutorial/flaskr/　flaskの
 + ひたすらn度寝してしまうので、布団に横たわっている場合叱咤してくれる目覚ましを作りたい。
     - コミットメントとして、家族・友人に二度寝状況を伝えるだけのLINE BOTを作ってみる。
 + ノリで考えたアイデアだけど、「遠隔」で管理したいものがある場合、LINEをUIにしているだけで、いろいろ応用可能なシステムとなる気がしている。
+
+※ https://github.com/Jumpo-523/react-native-appで目覚ましアプリケーションの実装を始めた。
+
 
 # 使い方
 
