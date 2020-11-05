@@ -18,7 +18,6 @@ https://github.com/pallets/flask/blob/1.1.2/examples/tutorial/flaskr/　flaskの
     - コミットメントとして、家族・友人に二度寝状況を伝えるだけのLINE BOTを作ってみる。
 + ノリで考えたアイデアだけど、「遠隔」で管理したいものがある場合、LINEをUIにしているだけで、いろいろ応用可能なシステムとなる気がしている。
 
-※ https://github.com/Jumpo-523/react-native-appで目覚ましアプリケーションの実装を始めた。
 
 
 # 使い方
